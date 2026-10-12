@@ -56,6 +56,8 @@ class Command(BaseCommand):
         if not dataset_dir:
             # Check relative to dealeros or parent
             candidates = [
+                Path("data"),
+                Path(__file__).resolve().parent.parent.parent.parent / "data",
                 Path(__file__).resolve().parent.parent.parent.parent.parent / "DealerOS_Assignment_Dataset",
                 Path(__file__).resolve().parent.parent.parent.parent / "DealerOS_Assignment_Dataset",
                 Path("DealerOS_Assignment_Dataset"),
